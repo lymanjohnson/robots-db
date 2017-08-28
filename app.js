@@ -28,23 +28,29 @@ app.get('/users/:username', function (req, res) {
     const robots = db.collection('robots');
     robots.find({username:req.params.username}).toArray(function (err, docs) {
       res.render("user", {robots: docs});
+			console.log();
     })
   })
 })
 
-// db.restaurants.find({name: "Wendy'S"})
+app.get('/forhire', function (req, res) {
+  MongoClient.connect(mongoURL, function (err, db) {
+    const robots = db.collection('robots');
+    robots.find({job:null}).toArray(function (err, docs) {
+      res.render("directory", {robots: docs});
+    })
+  })
+})
 
+app.get('/employed', function (req, res) {
+  MongoClient.connect(mongoURL, function (err, db) {
+    const robots = db.collection('robots');
+    robots.find({job:null}).toArray(function (err, docs) {
+      res.render("directory", {robots: docs});
+    })
+  })
+})
 
-// app.get("/users/:username", function (req, res) {
-//
-//
-//
-//   let thisUser = dataFile.users.filter(function( obj ) {
-//     return obj.username == req.params.username;
-//   });
-//
-//     res.render('user',thisUser[0])
-// })
 
 app.listen(3000, function () {
 	  console.log("Successfully started express application!");
