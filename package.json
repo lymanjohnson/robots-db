@@ -1,0 +1,27 @@
+{
+  "name": "user-directory",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.15.4",
+    "mustache": "^2.3.0",
+    "mustache-express": "^1.2.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lymanjohnson/user-directory.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/lymanjohnson/user-directory/issues"
+  },
+  "homepage": "https://github.com/lymanjohnson/user-directory#readme",
+  "description": ""
+}
