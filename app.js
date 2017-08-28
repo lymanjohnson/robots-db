@@ -23,16 +23,16 @@ app.get('/', function (req, res) {
   })
 })
 
-app.get('/user/:username', function (req, res) {
+app.get('/users/:username', function (req, res) {
   MongoClient.connect(mongoURL, function (err, db) {
     const robots = db.collection('robots');
     robots.find({username:req.params.username}).toArray(function (err, docs) {
-      res.render("directory", {robots: docs});
+      res.render("user", {robots: docs});
     })
   })
 })
 
-db.restaurants.find({name: "Wendy'S"})
+// db.restaurants.find({name: "Wendy'S"})
 
 
 // app.get("/users/:username", function (req, res) {
