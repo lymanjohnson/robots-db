@@ -11,7 +11,7 @@
          <img src="{{avatar}}" alt="">
       <div id="name-block">
          <h1>{{name}}</h1>
-
+     {{#robots}}
       {{#job}}
       <p>{{address.city}} {{address.country}} | {{job}}, {{company}}</p>
       {{/job}}
@@ -27,7 +27,7 @@
       {{#skills}}
         <li>{{.}}</li>
       {{/skills}}
-
+      {{/robots}}
       <br>
       <br>
       <a href="/users/">Back to directory</a>
