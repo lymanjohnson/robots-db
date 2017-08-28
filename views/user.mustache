@@ -13,10 +13,10 @@
          <h1>{{name}}</h1>
 
       {{#job}}
-      <p>{{address.city}} {{address.country}} | {{job}}, {{company}}</p>
+      <p>{{address.city}} <a href="/country/{{address.country}}">{{address.country}}</a> | {{job}}, {{company}}</p>
       {{/job}}
       {{^job}}
-      <span><p>{{address.city}} {{address.country}} | <p class ="emphasis">Available for Hire</p></span>
+      <span><p>{{address.city}} <a href="/country/{{address.country}}">{{address.country}}</a> | <p class ="emphasis">Available for Hire</p></span>
       {{/job}}
       <p>{{email}} | {{phone}}</p></div></div>
       <h2>Education:</h2>
@@ -25,7 +25,7 @@
       {{/university}}
       <h2>Skills</h2>
       {{#skills}}
-        <li>{{.}}</li>
+        <li><a href="/skill/{{.}}">{{.}}</a></li>
       {{/skills}}
       {{/robots}}
       <br>
