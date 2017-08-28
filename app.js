@@ -33,16 +33,16 @@ app.get('/users/:username', function (req, res) {
   })
 })
 
-app.get('/forhire', function (req, res) {
+app.get('/employed', function (req, res) {
   MongoClient.connect(mongoURL, function (err, db) {
     const robots = db.collection('robots');
-    robots.find({job:null}).toArray(function (err, docs) {
+    robots.find({job:{$nin: [null]}}).toArray(function (err, docs) {
       res.render("directory", {robots: docs});
     })
   })
 })
 
-app.get('/employed', function (req, res) {
+app.get('/forhire', function (req, res) {
   MongoClient.connect(mongoURL, function (err, db) {
     const robots = db.collection('robots');
     robots.find({job:null}).toArray(function (err, docs) {
