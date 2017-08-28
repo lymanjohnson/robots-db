@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+ <html>
+   <head>
+     <title></title>
+     <link rel="stylesheet" type="text/css" href="/styles-directory.css">
+   </head>
+   <body>
+     <div id="entry-wrapper">
+    {{#robots}}
+    <a href="/users/{{username}}">
+      <div class="entry">
+        <img src="{{avatar}}" alt="">
+        <h1>{{name}}</h1>
+        {{#job}}
+        <p>{{job}}</p>
+        <p>{{company}}</p>
+        {{/job}}
+        {{^job}}
+        <p class="emphasis">Available for hire</p>
+        {{/job}}
+      </div></a>
+    {{/robots}}
+  </div>
+   </body>
+ </html>

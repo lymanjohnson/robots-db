@@ -2,8 +2,11 @@
 const express = require("express");
 const path = require("path");
 const mustacheExpress = require("mustache-express");
+const mongodb = require('mongodb');
 const app = express();
-const dataFile = require("./data.js")
+const dataFile = require("./data.json")
+const MongoClient = mongodb.MongoClient;
+const mongoURL = 'mongodb://localhost:27017/newdb';
 
 app.engine("mustache", mustacheExpress());
 app.set("views", "./views")
@@ -11,12 +14,13 @@ app.set("view engine", "mustache")
 
 app.use(express.static(__dirname + '/public'));
 
-app.get("/", function (req, res) {
-		res.send(dataFile);
-})
-
-app.get("/users/", function (req, res) {
-		res.render('directory',dataFile);
+app.get('/', function (req, res) {
+  MongoClient.connect(mongoURL, function (err, db) {
+    const robots = db.collection('robots');
+    robots.find({}).toArray(function (err, docs) {
+      res.render("directory", {robots: docs});
+    })
+  })
 })
 
 app.get("/users/:username", function (req, res) {
@@ -33,11 +37,5 @@ app.listen(3000, function () {
 })
 
 
-
-
 // COPIED FROM CLINTON'S LECTURE
-app.use('/static',express.static('static'));
-
-app.use('/',function(req,res)){
-	MongoClient
-}
+// app.use('/static',express.static('static'));

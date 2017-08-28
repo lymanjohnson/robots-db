@@ -4,6 +4,7 @@
   "main": "app.js",
   "dependencies": {
     "express": "^4.15.4",
+    "mongodb": "^2.2.31",
     "mustache": "^2.3.0",
     "mustache-express": "^1.2.5"
   },

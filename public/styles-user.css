@@ -1,0 +1,41 @@
+*{
+    font-family: "Lucida Sans Typewriter", "Lucida Console", "Monaco", "Bitstream Vera Sans Mono", monospace;
+}
+
+#wrapper {
+  /*width: 90%;*/
+  /*margin: 5% 10% 10px 5%;*/
+  margin-left: 100px;
+}
+
+img {
+  border-radius: 100%;
+  border: 1px solid gray;
+  width: 200px;
+  height: 200px;
+
+}
+
+#top-line {
+  /*border: 1px solid black;*/
+  display: flex;
+  margin-left: -30px;
+}
+
+#name-block {
+  margin-left: 50px;
+  /*border: 1px solid red;*/
+}
+
+a {
+  /*margin-left: -70px;*/
+}
+
+h1 , h2 {
+    color: rgb(49, 73, 230);
+}
+
+p , li {
+  color: rgb(50, 50, 50);
+  list-style: none;
+}

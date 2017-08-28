@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+ <html>
+   <head>
+     <title></title>
+     <link rel="stylesheet" type="text/css" href="/styles-user.css">
+   </head>
+   <body>
+     <div id="wrapper">
+       <div id="top-line">
+
+         <img src="{{avatar}}" alt="">
+      <div id="name-block">
+         <h1>{{name}}</h1>
+
+      {{#job}}
+      <p>{{address.city}} {{address.country}} | {{job}}, {{company}}</p>
+      {{/job}}
+      {{^job}}
+      <span><p>{{address.city}} {{address.country}} | <p class ="emphasis">Available for Hire</p></span>
+      {{/job}}
+      <p>{{email}} | {{phone}}</p></div></div>
+      <h2>Education:</h2>
+      {{#university}}
+      <p>{{.}}</p>
+      {{/university}}
+      <h2>Skills</h2>
+      {{#skills}}
+        <li>{{.}}</li>
+      {{/skills}}
+
+      <br>
+      <br>
+      <a href="/users/">Back to directory</a>
+    </div>
+   </body>
+ </html>

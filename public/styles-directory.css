@@ -1,0 +1,43 @@
+*{
+    font-family: "Lucida Sans Typewriter", "Lucida Console", "Monaco", "Bitstream Vera Sans Mono", monospace;
+}
+
+a{
+  color: inherit;
+  text-decoration: inherit;
+}
+
+#entry-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.entry {
+  width: 250px;
+  height: 450px;
+  border: 2px solid rgb(50,50,50);
+  padding: 10px;
+  padding-bottom: 20px;
+  margin: 20px;
+
+}
+
+img{
+  width: 90%;
+}
+
+h1 {
+    color: rgb(49, 73, 230);
+    margin-left: 10px;
+}
+
+p {
+  color: rgb(50, 50, 50);
+  margin-left: 10px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.emphasis {
+  color: darkorange;
+}
