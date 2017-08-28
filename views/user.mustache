@@ -7,11 +7,11 @@
    <body>
      <div id="wrapper">
        <div id="top-line">
-
-         <img src="{{avatar}}" alt="">
+{{#robots}}
+         <img src= "{{avatar}}" alt="">
       <div id="name-block">
          <h1>{{name}}</h1>
-     {{#robots}}
+
       {{#job}}
       <p>{{address.city}} {{address.country}} | {{job}}, {{company}}</p>
       {{/job}}
@@ -30,7 +30,7 @@
       {{/robots}}
       <br>
       <br>
-      <a href="/users/">Back to directory</a>
+      <a href="/">Back to directory</a>
     </div>
    </body>
  </html>
